@@ -8,7 +8,8 @@ function computerPlay() {
 
 
 function gamePlay(playerSelection, computerSelection) { 
-    
+
+    playerSelection = playerSelection.toLowerCase();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         return 'You loose! Paper beats Rock';
@@ -24,12 +25,14 @@ function gamePlay(playerSelection, computerSelection) {
         return 'You win! Scissors cuts Paper'
     } 
     else {
-        return `${playerSelection} beats ${computerSelection}`
+        return 'It\'s a tie...'
     }
 }
 
-
-const playerSelection = 'paper';
+// const r = 'rock',
+//       p = 'paper',
+//       s = 'scissors';
+const playerSelection = prompt('rock, paper scissors?');
 const computerSelection = computerPlay();
 console.log(gamePlay(playerSelection, computerSelection));
 
