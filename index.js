@@ -34,8 +34,10 @@ let computerSelection = computerPlay();
         playerScore++
         return `${playerScore} points to you, scissors cuts paper`;
     } 
-    else {
+    else if (playerSelection === computerSelection) {
         return 'It\'s a tie...'
+    } else {
+        return alert('Please type rock, paper or scissors');
     }
 }
 
@@ -43,11 +45,11 @@ function game() {
     for (i = 0; i < 5; i++) {
         console.log(gamePlay());
     } if (playerScore > computerScore) {
-        alert('Hurray! You win!!');
+        alert(`Hurray! You win!! Score is ${playerScore} - ${computerScore}`);
     } else if (playerScore == computerScore) {
-        alert('It\'s a tie between you and the computer');
+        alert(`It\'s a tie between you and the computer. Score is ${playerScore} - ${computerScore}`);
     } else {
-        alert('Game over, you lost');
+        alert(`Game over, you lost. Score is ${playerScore} - ${computerScore}`);
     }
 }
 
