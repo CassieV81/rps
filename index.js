@@ -1,38 +1,54 @@
-const game = ['rock', 'paper', 'scissors'];
+const rps = ['rock', 'paper', 'scissors'];
 function computerPlay() {
-    return game[Math.floor(Math.random() * game.length)];
+    return rps[Math.floor(Math.random() * rps.length)];
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
 
 
 
-function gamePlay(playerSelection, computerSelection) { 
-
-    playerSelection = playerSelection.toLowerCase();
+function gamePlay() { 
+    
+let playerSelection = prompt('rock, paper, scissors?');
+let computerSelection = computerPlay();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
-        return 'You loose! Paper beats Rock';
+        computerScore++
+        return `${computerScore} point to the computer, rock covers paper`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return 'You win! Paper beats Rock';
+        playerScore++
+        return `${playerScore} point to you, rock covers paper`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        return 'You loose! Rock crushes Scissors';
+        computerScore++
+        return `${computerScore} point to the computer, rock crushes scissors`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return 'You win! Rock crushes Scissors'
+        playerScore++
+        return `${playerScore} point to you, rock crushes scissors`;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        return 'You loose! Scissors cuts Paper'
+        computerScore++
+        return `${computerScore} point to the computer, scissors cuts paper`;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return 'You win! Scissors cuts Paper'
+        playerScore++
+        return `${playerScore} point to you, scissors cuts paper`;
     } 
     else {
         return 'It\'s a tie...'
     }
 }
 
-// const r = 'rock',
-//       p = 'paper',
-//       s = 'scissors';
-const playerSelection = prompt('rock, paper scissors?');
-const computerSelection = computerPlay();
-console.log(gamePlay(playerSelection, computerSelection));
+function game() {
+    for (i = 0; i < 5; i++) {
+        console.log(gamePlay());
+    } if (playerScore > computerScore) {
+        alert('Hurray! You win!!');
+    } else {
+        alert('Game over, you lost');
+    }
+}
+
+console.log(game());
+// console.log(gamePlay());
+// console.log(playerScore, computerScore)
 
