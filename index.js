@@ -12,6 +12,7 @@ let computerScore = 0;
 function gamePlay() { 
     
 let playerSelection = prompt('rock, paper, scissors?');
+    playerSelection = playerSelection.toLowerCase();
 let computerSelection = computerPlay();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
