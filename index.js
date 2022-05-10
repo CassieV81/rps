@@ -16,22 +16,22 @@ let computerSelection = computerPlay();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore++
-        return `${computerScore} point to the computer, rock covers paper`;
+        return `${computerScore} points to the computer, rock covers paper`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore++
-        return `${playerScore} point to you, rock covers paper`;
+        return `${playerScore} points to you, rock covers paper`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore++
-        return `${computerScore} point to the computer, rock crushes scissors`;
+        return `${computerScore} points to the computer, rock crushes scissors`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore++
-        return `${playerScore} point to you, rock crushes scissors`;
+        return `${playerScore} points to you, rock crushes scissors`;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore++
-        return `${computerScore} point to the computer, scissors cuts paper`;
+        return `${computerScore} points to the computer, scissors cuts paper`;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore++
-        return `${playerScore} point to you, scissors cuts paper`;
+        return `${playerScore} points to you, scissors cuts paper`;
     } 
     else {
         return 'It\'s a tie...'
@@ -43,6 +43,8 @@ function game() {
         console.log(gamePlay());
     } if (playerScore > computerScore) {
         alert('Hurray! You win!!');
+    } else if (playerScore == computerScore) {
+        alert('It\'s a tie between you and the computer');
     } else {
         alert('Game over, you lost');
     }
