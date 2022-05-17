@@ -6,7 +6,8 @@ function computerPlay() {
 let playerScore = 0;
 let computerScore = 0;
 let result = '';
-let finalResult = '';
+let winResult = '';
+let loseResult ='';
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -27,15 +28,16 @@ function stopCount() {
 function game() {
     for (i = 0; i < gamePlay; i++);
      if (playerScore == 5) {
-       finalResult = `Hurray! You win!! Score is ${playerScore} - ${computerScore}.
+       winResult = `Hurray! You win!! Score is ${playerScore} - ${computerScore}.
         Reload page to play again`;
        stopCount();
     } else if (computerScore == 5) {
-       finalResult = `Game over, you lost. Score is ${playerScore} - ${computerScore}.
+       loseResult = `Game over, you lost. Score is ${playerScore} - ${computerScore}.
        Reload page to play again`;
        stopCount();
     } 
-    document.getElementById('finalResult').innerHTML = finalResult;
+    document.getElementById('winResult').innerHTML = winResult;
+    document.getElementById('loseResult').innerHTML = loseResult;
     return
 }
 

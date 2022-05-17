@@ -48,14 +48,22 @@ p {
     font-weight: bold;
     font-size: 20px;
 }
-#finalResult  {
-    border-radius: 10px;
+#winResult  {
+    border-radius: 5px;
+    background: #009933;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
+}
+#loseResult  {
+    border-radius: 5px;
     background: #800000;
     color: white;
     font-weight: bold;
     font-size: 20px;
+    padding: 0 10px;
 }
-
 button {
     border: 3px solid black;
     border-radius: 5px;
@@ -68,3 +76,6 @@ button {
     padding: 20px;
     width: 200px;
 }
+button:hover {
+    transform: scale(1.2);
+} 
