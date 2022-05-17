@@ -22,6 +22,8 @@ function stopCount() {
 }
 
 
+
+
 function game() {
     for (i = 0; i < gamePlay; i++);
      if (playerScore == 5) {
@@ -44,22 +46,28 @@ function gamePlay(playerSelection) {
 let computerSelection = computerPlay();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
-        computerScore++
+        computerScore++;
+        const currentScore = document.querySelector('#scoreBoard2').innerHTML = `${computerScore}`;
         result = `${computerScore} points to the computer, paper covers rock`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        playerScore++
+        playerScore++;
+        const currentScore = document.querySelector('#scoreBoard1').innerHTML = `${playerScore}`;
         result = `${playerScore} points to you, paper covers rock`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        computerScore++
+        computerScore++;
+        const currentScore = document.querySelector('#scoreBoard2').innerHTML = `${computerScore}`;
         result = `${computerScore} points to the computer, rock crushes scissors`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        playerScore++
+        playerScore++;
+        const currentScore = document.querySelector('#scoreBoard1').innerHTML = `${playerScore}`;
         result = `${playerScore} points to you, rock crushes scissors`;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        computerScore++
+        computerScore++;
+        const currentScore = document.querySelector('#scoreBoard2').innerHTML = `${computerScore}`;
         result = `${computerScore} points to the computer, scissors cuts paper`;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        playerScore++
+        playerScore++;
+        const currentScore = document.querySelector('#scoreBoard1').innerHTML = `${playerScore}`;
         result = `${playerScore} points to you, scissors cuts paper`;
     } else  {
         result = 'It\'s a tie...'
