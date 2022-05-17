@@ -1,0 +1,44 @@
+body {
+    min-height: 100vh;
+    background: #BDB76B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#result, #finalResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+    
+}
+
+#result {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+#finalResult  {
+    border-radius: 5px;
+    background: #800000;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button {
+    border: 3px solid black;
+    border-radius: 5px;
+    background: #556b2f;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    align-self: center;
+    margin: 20px;
+    width: 150px;
+}
