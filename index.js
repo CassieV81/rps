@@ -17,10 +17,10 @@ let computerSelection = computerPlay();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore++
-        return `${computerScore} points to the computer, rock covers paper`;
+        return `${computerScore} points to the computer, paper covers rock`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore++
-        return `${playerScore} points to you, rock covers paper`;
+        return `${playerScore} points to you, paper covers rock`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore++
         return `${computerScore} points to the computer, rock crushes scissors`;
