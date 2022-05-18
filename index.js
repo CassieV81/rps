@@ -7,7 +7,7 @@ let playerScore = 0;
 let computerScore = 0;
 let result = '';
 let winMessage = '';
-let loseMessage ='';
+let loseMessage = '';
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -36,8 +36,8 @@ function game() {
        Reload page to play again`;
        stopCount();
     } 
-    document.getElementById('winResult').innerHTML = winMessage;
-    document.getElementById('loseResult').innerHTML = loseMessage;
+    document.getElementById('winMessage').innerHTML = winMessage;
+    document.getElementById('loseMessage').innerHTML = loseMessage;
     return
 }
 
@@ -82,7 +82,5 @@ let computerSelection = computerPlay();
 
 
 
-// console.log(game());
-// console.log(gamePlay());
-// console.log(playerScore, computerScore)
+
 
